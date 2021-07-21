@@ -14,17 +14,17 @@ void	ft_putstring(char[] string)
 	
 }
 
-void ft_print_comb(void)
+void	combinations(char[] arr, int len, int start_position, char[] result)
 {
-	int i;
-	int j;
-	int k;
-	char[] numbers;
+	if (len == 0)
+	{
+		ft_putchar()
+	}
+}
 
-	i = 0;
-	j = 1;
-	k = 1;
-	numbers = {0,1,2,3,4,5,6,7,8,9,10};
+void	ft_print_comb(void)
+{
+	
 }
 
 int	main(void)
