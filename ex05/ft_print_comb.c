@@ -11,7 +11,6 @@ void	ft_print_comb(void)
 	int	j;
 	int	k;
 	int	iter;
-	int	numbers[10];
 	int	len;
 
 	i = 0;
@@ -19,11 +18,11 @@ void	ft_print_comb(void)
 	k = 1;
 	iter = 10;
 	len = sizeof(numbers) / sizeof(int);
-
 	while (iter < 10)
 	{
 		numbers[iter] = iter;
 	}
+	int	numbers[10];
 }
 
 int	main(void)
