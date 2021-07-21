@@ -7,23 +7,21 @@ void	ft_putchar(char c)
 
 void	ft_print_comb(void)	
 {
-	int len;
 	int i;
 	int j;
 	int k;
 
-	len = 10;
 	i = 0;
 	j = 1;
 	k = 2;
 
-	while (i < len - 2)
+	while (i < 10 - 2)
 	{
 		j = i + 1;
-		while (j < len - 1)
+		while (j < 10 - 1)
 		{
 			k = j + 1;
-			while (k < len)
+			while (k < 10)
 			{
 				ft_putchar(48 + i);
 				ft_putchar(48 + j);
