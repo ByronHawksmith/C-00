@@ -18,7 +18,10 @@ void	ft_print_comb_helper(int len, int i, int j, int k)
 				ft_putchar('0' + i);
 				ft_putchar('0' + j);
 				ft_putchar('0' + k);
-				ft_putchar(',');
+				if (!(i == 7 && j == 8 && k == 9))
+				{
+					ft_putchar(',');
+				}
 				k++;
 			}
 			j++;
