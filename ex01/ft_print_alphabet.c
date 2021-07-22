@@ -5,12 +5,16 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
+/*
+'a' == 97, ASCII
+'z' == 122, ASCII
+*/
 void	ft_print_alphabet(void)
 {
-	char	n; // could also be int
+	char	n;
 
-	n = 'a'; // 'a' == 97
-	while (n <= 'z') // 'z' == 122
+	n = 'a';
+	while (n <= 'z')
 	{
 		ft_putchar(n);
 		n++;

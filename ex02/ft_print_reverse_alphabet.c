@@ -5,12 +5,16 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
+/*
+'a' == 97, ASCII
+'z' == 122, ASCII
+*/
 void	ft_print_reverse_alphabet(void)
 {
-	char	n; // could also be int
+	char	n;
 
-	n = 'z'; // 'z' == 122
-	while (n >= 'a') // 'a' == 97
+	n = 'z';
+	while (n >= 'a')
 	{
 		ft_putchar(n);
 		n--;
