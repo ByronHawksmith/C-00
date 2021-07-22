@@ -9,10 +9,16 @@ void	ft_print_reverse_alphabet(void)
 {
 	int	n;
 
-	n = 122;
-	while (n > 96)
+	n = 'z'; // 'z' == 122
+	while (n >= 'a') // 'a' == 97
 	{
 		ft_putchar(n);
 		n--;
 	}
 }
+
+// int	main(void)
+// {
+// 	ft_print_reverse_alphabet();
+// 	return(0);
+// }
