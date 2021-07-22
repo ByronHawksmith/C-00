@@ -7,7 +7,7 @@ void	ft_putchar(char c)
 
 void	ft_print_reverse_alphabet(void)
 {
-	int	n;
+	char	n; // could also be int
 
 	n = 'z'; // 'z' == 122
 	while (n >= 'a') // 'a' == 97

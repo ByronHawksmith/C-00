@@ -7,12 +7,18 @@ void	ft_putchar(char c)
 
 void	ft_print_numbers(void)
 {
-	int	n;
+	char	n; // could also be int
 
-	n = 48;
-	while (n < 58)
+	n = '0'; // '0' == 48
+	while (n <= '9') // '9' == 57
 	{
 		ft_putchar(n);
 		n++;
 	}
 }
+
+// int	main(void)
+// {
+// 	ft_print_numbers();
+// 	return(0);
+// }
