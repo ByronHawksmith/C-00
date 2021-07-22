@@ -7,8 +7,10 @@ void	ft_putchar(char c)
 
 void	ft_put_digit_2(int n)
 {
-	ft_putchar('0' + (n / 10)); // / 10 gets lh value
-	ft_putchar('0' + (n % 10)); // % 10 gets rh value
+	// / 10 gets lh value
+	ft_putchar('0' + (n / 10));
+	// % 10 gets rh value
+	ft_putchar('0' + (n % 10));
 }
 
 void	ft_put_combination(int left_d, int right_d)
