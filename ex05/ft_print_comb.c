@@ -5,41 +5,46 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_comb_helper(int len, int i, int j, int k)
+void	ft_print_comb_helper(int left_d, int mid_d, int right_d)
 {
-	while (i < len - 2)
+	while (left_d < 8)
 	{
-		j = i + 1;
-		while (j < len - 1)
+		mid_d = left_d + 1;
+		while (mid_d < 9)
 		{
-			k = j + 1;
-			while (k < len)
+			right_d = mid_d + 1;
+			while (right_d < 10)
 			{
-				ft_putchar('0' + i);
-				ft_putchar('0' + j);
-				ft_putchar('0' + k);
-				if (!(i == 7 && j == 8 && k == 9))
+				ft_putchar('0' + left_d);
+				ft_putchar('0' + mid_d);
+				ft_putchar('0' + right_d);
+				if (left_d != 7 || mid_d != 8 || right_d != 9)
 				{
 					ft_putchar(',');
+					ft_putchar(' ');
 				}
-				k++;
+				right_d++;
 			}
-			j++;
+			mid_d++;
 		}
-		i++;
+		left_d++;
 	}
 }
 
-void	ft_print_comb(void)	
+void	ft_print_comb(void)
 {
-	int	len;
-	int	i;
-	int	j;
-	int	k;
+	int	left_d;
+	int	mid_d;
+	int	right_d;
 
-	len = 10;
-	i = 0;
-	j = 1;
-	k = 2;
-	ft_print_comb_helper(len, i, j, k);
+	left_d = 0;
+	mid_d = 1;
+	right_d = 2;
+	ft_print_comb_helper(left_d, mid_d, right_d);
 }
+
+// int	main()
+// {
+// 	ft_print_comb();
+// 	return(0);
+// }
