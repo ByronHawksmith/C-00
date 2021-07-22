@@ -5,11 +5,14 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
+/*
+Assuming a two digit number
+n / 10 gives left hand digit
+n % 10 gives right hand digit
+*/
 void	ft_put_digit_2(int n)
 {
-	// / 10 gets lh value
 	ft_putchar('0' + (n / 10));
-	// % 10 gets rh value
 	ft_putchar('0' + (n % 10));
 }
 
