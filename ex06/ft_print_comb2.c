@@ -7,22 +7,19 @@ void	ft_putchar(char c)
 
 void	ft_put_digit_2(int n)
 {
-	if (n < 10)
-	{
-		ft_putchar('0');
-	}
-	ft_putchar('0' + n);
+	ft_putchar('0' + (n / 10));
+	ft_putchar('0' + (n % 10));
 }
 
 void	ft_put_combination(int left, int right)
 {
-	if (left != 0)
-	{
-		ft_putchar(',');
-	}
 	ft_put_digit_2(left);
 	ft_putchar(' ');
 	ft_put_digit_2(right);
+	if (left != 98 || right != 99)
+	{
+		write(1, ", ", 2);
+	}
 }
 
 void	ft_print_comb2(void)	
@@ -31,13 +28,13 @@ void	ft_print_comb2(void)
 	int	right_digit;
 
 	left_digit = 0;
-	while (left_digit < 99)
+	while (left_digit <= 98)
 	{
-		right_digit = left_digit;
+		right_digit = left_digit + 1;
 		while (right_digit <= 99)
 		{
-			right_digit++;
 			ft_put_combination(left_digit, right_digit);
+			right_digit++;
 		}
 		left_digit++;
 	}
