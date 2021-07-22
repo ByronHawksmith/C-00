@@ -9,10 +9,16 @@ void	ft_print_alphabet(void)
 {
 	int	n;
 
-	n = 97;
-	while (n < 123)
+	n = 'a'; // 'a' == 97
+	while (n <= 'z') // 'z' == 122
 	{
 		ft_putchar(n);
 		n++;
 	}
 }
+
+// int	main(void)
+// {
+// 	ft_print_alphabet();
+// 	return(0);
+// }
