@@ -1,44 +1,25 @@
 #include <unistd.h>
 
-void	ft_putchar6(char c)
+void    ft_print_comb(void)
 {
-	write(1, &c, 1);
-}
+	char	digits[3];
 
-void	ft_print_comb_helper(int left_d, int mid_d, int right_d)
-{
-	while (left_d < 8)
+	digits[0] = '0';
+	digits[1] = '1';
+	digits[2] = '2';
+	while (digits[0] <= '7')
 	{
-		mid_d = left_d + 1;
-		while (mid_d < 9)
+		while (digits[1] <= '8')
 		{
-			right_d = mid_d + 1;
-			while (right_d < 10)
+			while (digits[2] <= '9')
 			{
-				ft_putchar6('0' + left_d);
-				ft_putchar6('0' + mid_d);
-				ft_putchar6('0' + right_d);
-				if (left_d != 7 || mid_d != 8 || right_d != 9)
-				{
-					ft_putchar6(',');
-					ft_putchar6(' ');
-				}
-				right_d++;
+				write(1, &digits, 3);
+				if (digits[0] != '7' || digits[1] != '8' || digits[2] != '9')
+					write(1, ", ", 2);
+				digits[2]++;
 			}
-			mid_d++;
+			digits[2] = digits[1]++;
 		}
-		left_d++;
+		digits[1] = digits[0]++;
 	}
-}
-
-void	ft_print_comb(void)
-{
-	int	left_d;
-	int	mid_d;
-	int	right_d;
-
-	left_d = 0;
-	mid_d = 1;
-	right_d = 2;
-	ft_print_comb_helper(left_d, mid_d, right_d);
 }

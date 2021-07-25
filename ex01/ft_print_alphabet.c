@@ -1,22 +1,17 @@
 #include <unistd.h>
 
-void	ft_putchar2(char c)
-{
-	write(1, &c, 1);
-}
-
 /*
 'a' == 97, ASCII
 'z' == 122, ASCII
 */
 void	ft_print_alphabet(void)
 {
-	char	n;
+	char	chr;
 
-	n = 'a';
-	while (n <= 'z')
+	chr = 'a';
+	while (chr <= 'z')
 	{
-		ft_putchar2(n);
-		n++;
+		write(1, &chr, 1);
+		chr++;
 	}
 }

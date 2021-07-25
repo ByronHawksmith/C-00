@@ -1,22 +1,17 @@
 #include <unistd.h>
 
-void	ft_putchar3(char c)
-{
-	write(1, &c, 1);
-}
-
 /*
 'a' == 97, ASCII
 'z' == 122, ASCII
 */
 void	ft_print_reverse_alphabet(void)
 {
-	char	n;
+	char	chr;
 
-	n = 'z';
-	while (n >= 'a')
+	chr = 'z';
+	while (chr >= 'a')
 	{
-		ft_putchar3(n);
-		n--;
+		write(1, &chr, 1);
+		chr--;
 	}
 }

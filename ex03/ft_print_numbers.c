@@ -1,22 +1,17 @@
 #include <unistd.h>
 
-void	ft_putchar4(char c)
-{
-	write(1, &c, 1);
-}
-
 /*
 '0' == 48, ASCII
 '9' == 57, ASCII
 */
 void	ft_print_numbers(void)
 {
-	char	n;
+	char	chr;
 
-	n = '0';
-	while (n <= '9')
+	chr = '0';
+	while (chr <= '9')
 	{
-		ft_putchar4(n);
-		n++;
+		write(1, &chr, 1);
+		chr++;
 	}
 }
