@@ -40,6 +40,14 @@ int	main(void)
 	ft_putchar('\n');
 	ft_putchar('\n');
 
+	ft_putnbr(1);
+	ft_putchar('\n');
+	ft_putnbr(-1);
+	ft_putchar('\n');
+	ft_putnbr(-2);
+	ft_putchar('\n');
+	ft_putnbr(0);
+	ft_putchar('\n');
 	ft_putnbr(247);
 	ft_putchar('\n');
 	ft_putnbr(4294966196);
