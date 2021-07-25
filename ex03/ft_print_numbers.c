@@ -1,9 +1,9 @@
 #include <unistd.h>
 
 /*
-'0' == 48, ASCII
-'9' == 57, ASCII
-*/
+ *'a' == 97, ASCII
+ *'z' == 122, ASCII
+ */
 void	ft_print_numbers(void)
 {
 	char	chr;

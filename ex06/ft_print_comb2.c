@@ -6,10 +6,14 @@ void	ft_putchar7(char c)
 }
 
 /*
-Assuming a two digit number
-n / 10 gives left hand digit
-n % 10 gives right hand digit
-*/
+ * Assuming a two digit number
+ * n / 10 gives left hand digit
+ * n % 10 gives right hand digit
+ *
+ * integer division in c rounds
+ * down to zero if there is a
+ *remainder.
+ */
 void	print_num(int n)
 {
 	ft_putchar7('0' + (n / 10));
