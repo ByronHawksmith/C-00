@@ -1,10 +1,5 @@
 #include <unistd.h>
 
-void	ft_putchar7(char c)
-{
-	write(1, &c, 1);
-}
-
 /*
  * Assuming a two digit number
  * n / 10 gives left hand digit
@@ -16,14 +11,18 @@ void	ft_putchar7(char c)
  */
 void	print_num(int n)
 {
-	ft_putchar7('0' + (n / 10));
-	ft_putchar7('0' + (n % 10));
+	char tmp;
+
+	tmp = '0' + (n / 10);
+	write(1, &tmp, 1);
+	tmp = '0' + (n % 10);
+	write(1, &tmp, 1);
 }
 
 void	print_comb(int l_num, int r_num)
 {
 	print_num(l_num);
-	ft_putchar7(' ');
+	write(1, " ", 1);
 	print_num(r_num);
 	if (l_num != 98 || r_num != 99)
 	{
