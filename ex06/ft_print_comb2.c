@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putchar7(char c)
 {
 	write(1, &c, 1);
 }
@@ -12,14 +12,14 @@ n % 10 gives right hand digit
 */
 void	ft_put_digit_2(int n)
 {
-	ft_putchar('0' + (n / 10));
-	ft_putchar('0' + (n % 10));
+	ft_putchar7('0' + (n / 10));
+	ft_putchar7('0' + (n % 10));
 }
 
 void	ft_put_combination(int left_d, int right_d)
 {
 	ft_put_digit_2(left_d);
-	ft_putchar(' ');
+	ft_putchar7(' ');
 	ft_put_digit_2(right_d);
 	if (left_d != 98 || right_d != 99)
 	{
@@ -44,9 +44,3 @@ void	ft_print_comb2(void)
 		left_d++;
 	}
 }
-
-// int	main()
-// {
-// 	ft_print_comb2();
-// 	return(0);
-// }
