@@ -1,9 +1,6 @@
 #include <unistd.h>
 
-int		g_comb_len;
-char	g_buf[10];
-
-void	print_last(void)
+void	print_last(char *g_buf)
 {
 	g_buf[0]++;
 	write(1, g_buf, 10);
@@ -26,7 +23,7 @@ void	print_last(void)
  * requesting it to increment the
  * digit at the next position.
  */
-void	rec_comb_gen(int dig, int buf_idx)
+void	rec_comb_gen(int dig, int buf_idx, char *g_buf, int g_comb_len)
 {
 	if (buf_idx == g_comb_len)
 	{
@@ -38,7 +35,7 @@ void	rec_comb_gen(int dig, int buf_idx)
 	{
 		dig++;
 		g_buf[buf_idx] = '0' + dig;
-		rec_comb_gen(dig, buf_idx + 1);
+		rec_comb_gen(dig, buf_idx + 1, g_buf, g_comb_len);
 	}
 }
 
@@ -52,7 +49,9 @@ void	rec_comb_gen(int dig, int buf_idx)
  */
 void	ft_print_combn(int n)
 {
-	int	left_most_dig;
+	int		left_most_dig;
+	int		g_comb_len;
+	char	g_buf[10];
 
 	if (n < 1 || n > 9)
 		return ;
@@ -61,8 +60,8 @@ void	ft_print_combn(int n)
 	while (left_most_dig <= 9 - n)
 	{
 		g_buf[0] = '0' + left_most_dig;
-		rec_comb_gen(left_most_dig, 1);
+		rec_comb_gen(left_most_dig, 1, g_buf, g_comb_len);
 		left_most_dig++;
 	}
-	print_last();
+	print_last(g_buf);
 }
