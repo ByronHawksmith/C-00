@@ -1,9 +1,9 @@
 #include <unistd.h>
 
-void	print_last(char *g_buf)
+void	print_last(char *g_buf, int g_comb_len)
 {
 	g_buf[0]++;
-	write(1, g_buf, 10);
+	write(1, g_buf, g_comb_len);
 }
 
 /*
@@ -63,5 +63,5 @@ void	ft_print_combn(int n)
 		rec_comb_gen(left_most_dig, 1, g_buf, g_comb_len);
 		left_most_dig++;
 	}
-	print_last(g_buf);
+	print_last(g_buf, n);
 }
