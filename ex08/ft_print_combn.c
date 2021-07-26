@@ -1,8 +1,13 @@
 #include <unistd.h>
-#include <stdio.h>
 
 int		g_comb_len;
 char	g_buf[10];
+
+void	print_last()
+{
+	g_buf[0]++;
+	write(1, g_buf, 10);
+}
 
 /*
  * g_comb_len determines the length
@@ -18,8 +23,8 @@ char	g_buf[10];
  * Otherwise, increment the digit
  * at the current buf_idx in the
  * buffer and call rec_comb_gen
- * requesting it to update digit at
- * the next position.
+ * requesting it to increment the
+ * digit at the next position.
  */
 void	rec_comb_gen(int dig, int buf_idx)
 {
@@ -37,12 +42,14 @@ void	rec_comb_gen(int dig, int buf_idx)
 	}
 }
 
-void	print_last()
-{
-	g_buf[0]++;
-	write(1, g_buf, 10);
-}
-
+/*
+ * Make n recursive calls to the
+ * rec_comb_gen function.
+ *
+ * The rec_comb_gen function
+ * generates all the combs needed
+ * for a given left_most_dig.
+ */
 void	ft_print_combn(int n)
 {
 	int	left_most_dig;
@@ -58,9 +65,4 @@ void	ft_print_combn(int n)
 		left_most_dig++;
 	}
 	print_last();
-}
-
-int	main(void)
-{
-	ft_print_combn(2);
 }

@@ -6,6 +6,7 @@ void	ft_is_negative(int n);
 void	ft_print_comb(void);
 void	ft_print_comb2(void);
 void	ft_putnbr(int nb);
+void	ft_print_combn(int n);
 
 // gcc -Wall -Wextra -Werror ex00/ft_putchar.c ex01/ft_print_alphabet.c ex02/ft_print_reverse_alphabet.c ex03/ft_print_numbers.c ex04/ft_is_negative.c ex05/ft_print_comb.c ex06/ft_print_comb2.c main.c
 int	main(void)
@@ -56,6 +57,38 @@ int	main(void)
 	ft_putchar('\n');
 	ft_putnbr(-2147483648);
 	ft_putchar('\n');
+
+	ft_print_combn(0);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(1);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(2);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(3);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(4);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(5);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(6);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(7);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(8);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(9);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(10);
 
 	return (0);
 }
