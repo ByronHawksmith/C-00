@@ -9,8 +9,10 @@ void	ft_print_comb(void)
 	digits[2] = '2';
 	while (digits[0] <= '7')
 	{
+		digits[1] = digits[0] + 1;
 		while (digits[1] <= '8')
 		{
+			digits[2] = digits[1] + 1;
 			while (digits[2] <= '9')
 			{
 				write(1, &digits, 3);
