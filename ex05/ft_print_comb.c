@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void    ft_print_comb(void)
+void	ft_print_comb(void)
 {
 	char	digits[3];
 

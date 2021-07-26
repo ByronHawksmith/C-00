@@ -11,7 +11,7 @@
  */
 void	print_num(int n)
 {
-	char tmp;
+	char	tmp;
 
 	tmp = '0' + (n / 10);
 	write(1, &tmp, 1);

@@ -3,7 +3,7 @@
 int		g_comb_len;
 char	g_buf[10];
 
-void	print_last()
+void	print_last(void)
 {
 	g_buf[0]++;
 	write(1, g_buf, 10);
@@ -55,7 +55,7 @@ void	ft_print_combn(int n)
 	int	left_most_dig;
 
 	if (n < 1 || n > 9)
-		return;
+		return ;
 	left_most_dig = 0;
 	g_comb_len = n;
 	while (left_most_dig <= 9 - n)
